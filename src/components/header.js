@@ -8,13 +8,13 @@ export default function Header() {
     const [link, setLink] = useState("");
 
     useEffect(() => {
-        setLink(window.location.pathname);        
+        setLink(window.location.pathname);
 
     }, [window.location.pathname]);
 
 
     return (
-        <header className="w-full h-16 bg-black flex items-center justify-between px-8">
+        <header className="w-full relative z-20 h-16 bg-black flex items-center justify-between px-8">
 
             <Link to="/">
                 <div className="flex items-center">
@@ -40,6 +40,16 @@ export default function Header() {
                             Entrar com gov.br
                         </button>
                     </Link>
+                }
+
+                {link != "/" &&
+
+                    <button className="w-10 min-w-10 h-10 bg-diamount-500 hover:bg-diamount-600 text-white rounded-full">
+                        <span className="text-lg font-medium">
+                            L
+                        </span>
+                    </button>
+
                 }
             </div>
 
