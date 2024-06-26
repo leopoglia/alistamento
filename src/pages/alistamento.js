@@ -11,7 +11,7 @@ export default function Alistamento() {
       <Header />
 
 
-      <img src="/walppaper.png" className="fixed w-full h-screen object-cover"></img>
+      <img src="/walppaper.png" className="fixed w-screen  object-cover"></img>
 
 
       <div className="relative w-full h-screen flex justify-center p-8">
