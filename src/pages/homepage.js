@@ -43,11 +43,11 @@ export default function Alistamento() {
 
 
     return (
-        <div className="h-screen overflow-hidden">
+        <div className="h-screen md:overflow-hidden">
             <Header />
 
-            <div className="relative w-full flex flex-col p-8">
-                <div className="w-full rounded p-4 px-6">
+            <div className="relative w-full flex flex-col p-2 px-8">
+                <div className="w-full rounded p-2 px-6">
 
                     <p>
                         Serviços Disponíveis

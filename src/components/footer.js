@@ -28,7 +28,7 @@ export default function Footer(props) {
 
 
     return (
-        <footer className={"flex flex-col md:flex-row items-center justify-between fixed bottom-0 text-sm w-full font-light h-16 md:h-12 px-10 " + (props.style == "black" ? "text-black fill-black" : "text-white fill-white")}>
+        <footer className={"flex flex-col md:flex-row items-center justify-between md:fixed bottom-0 text-sm w-full font-light h-16 md:h-12 px-10 " + (props.style == "black" ? "text-black fill-black" : "text-white fill-white")}>
 
 
             <div className="flex">
