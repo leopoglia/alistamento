@@ -1,6 +1,17 @@
-
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer(props) {
+
+    const [loc, setLoc] = useState("");
+    const [openProfile, setOpenProfile] = useState(false);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        setLoc(location.pathname);
+    }, [location.pathname]);
+
 
 
     const socialMedia = [
@@ -28,7 +39,7 @@ export default function Footer(props) {
 
 
     return (
-        <footer className={"flex flex-col md:flex-row items-center justify-between md:fixed bottom-0 text-sm w-full font-light h-16 md:h-12 px-10 " + (props.style == "black" ? "text-black fill-black" : "text-white fill-white")}>
+        <footer className={"flex flex-col md:flex-row items-center justify-between md:fixed bottom-0 text-sm w-full font-light h-16 md:h-12 px-10 " + (loc != "/" ? "text-zinc-700 fill-zinc-700" : "text-white fill-white")}>
 
 
             <div className="flex">
@@ -43,11 +54,13 @@ export default function Footer(props) {
                 })}
             </div>
 
-            <div className="flex mt-2 mb-4 md:mt-0 md:mb-0">
-                Alistamento Militiar Online
-                Copyrigth © 2024
-            </div>
 
+            {loc != "/" &&
+                <div className="flex mt-2 mb-4 md:mt-0 md:mb-0">
+                    Alistamento Militiar Online
+                    Copyrigth © 2024
+                </div>
+            }
         </footer>
     )
 }
