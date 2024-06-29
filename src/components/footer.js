@@ -39,7 +39,7 @@ export default function Footer(props) {
 
 
     return (
-        <footer className={"flex flex-col md:flex-row items-center justify-between md:fixed bottom-0 text-sm w-full font-light h-16 md:h-12 px-10 " + (loc != "/" ? "text-zinc-700 fill-zinc-700" : "text-white fill-white")}>
+        <footer className={"flex flex-col md:flex-row items-center justify-between md:fixed bottom-0 text-sm w-full font-light h-16 md:h-12 px-12 " + (loc != "/" ? "text-zinc-700 fill-zinc-700" : "text-white fill-white")}>
 
 
             <div className="flex">

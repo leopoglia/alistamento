@@ -19,7 +19,6 @@ import Autenticar from './pages/autenticar';
 import Contato from './pages/contato';
 import Diretoria from './pages/diretoria';
 import Informacoes from './pages/informacoes';
-import Editar from './pages/editar';
 import Perfil from './pages/perfil';
 
 
@@ -53,7 +52,6 @@ function Root() {
       <Route path="/contato" element={<Contato />} />
       <Route path="/diretoria" element={<Diretoria />} />
       <Route path="/informacoes" element={<Informacoes />} />
-      <Route path="/editar" element={<Editar />} />
       <Route path="/perfil" element={<Perfil />} />
     </Routes>
   );

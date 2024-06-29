@@ -86,7 +86,7 @@ export default function Servicos() {
                     </button>
 
                     <button className="w-full md:w-[48%] bg-diamount-500 hover:bg-diamount-600 p-3 text-white rounded mb-4">
-                        <p>Editar informações</p>
+                        <p>Perguntas frequentes</p>
                     </button>
                 </div>
 

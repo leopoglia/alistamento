@@ -43,7 +43,7 @@ export default function Locais() {
                 <span className="text-sm">Nome do municipio</span>
 
                 <div className="flex">
-                    <input onChange={(e)=> setSearch(e.target.value)} type="text" placeholder="" className="w-full h-10 bg-zinc-50 p-2 px-4 text-zinc-800 border rounded" />
+                    <input onChange={(e)=> setSearch(e.target.value)} type="text" placeholder="" className="w-full h-10 p-2 px-4 text-zinc-800 border rounded" />
                     <button onClick={()=> searchLocal()} className="w-40 h-10 ml-2 bg-diamount-500 hover:bg-diamount-600 border border-diamount-500 text-white rounded">
                         Buscar
                     </button>
