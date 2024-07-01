@@ -1,7 +1,10 @@
 
-
+import { useState, useEffect } from "react"
 
 export default function Perguntas() {
+
+    const [category, setCategory] = useState("Serviço Militar");
+    const [index, setIndex] = useState();
 
 
     const questions = [
@@ -51,8 +54,6 @@ export default function Perguntas() {
             answer: "O cidadão deve apresentar apenas uma declaração de imperativo de consciência redigida de próprio punho ou 'a rogo', contendo as razões de sua objeção em prestar o Serviço Militar Obrigatório em virtude de sua crença religiosa, linha filosófica ou partido político, bem como sua opção pelo Serviço Alternativo ao Serviço Militar Obrigatório. Vale lembrar que as informações prestadas implicam a imediata inclusão do jovem no processo seletivo ao Serviço Militar Alternativo ao Serviço Militar Obrigatório - SASMO, bem como a aceitação de todas as exigências e condições previstas em lei. Por sua vez, a identificação de informações inconsistentes, acarretará a abertura de processo para averiguação das declarações prestadas e possível enquadramento no prescrito no Art. 299 do Código Penal - Decreto-Lei nº 2.848, de 7 de dezembro de 1940: 'Art. 299 - Omitir, em documento público ou particular, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita, com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante: Pena - reclusão, de um a cinco anos, e multa, se o documento é público, e reclusão de um a três anos, e multa, se o documento é particular.'"
         },
 
-
-
         {
             category: "Alistamento Militar",
             question: "Quem é obrigado a prestar o serviço militar?",
@@ -70,21 +71,52 @@ export default function Perguntas() {
     return (
         <div className="relative w-full flex flex-col p-8 px-14">
             <p>Perguntas frequentes</p>
-            <div className="w-full h-[calc(100vh-200px)] mt-2 border rounded">
+            <div className="w-full h-[calc(100vh-200px)] mt-2 border rounded overflow-hidden">
                 <div className="w-full h-14 flex items-center px-6 border-b">
-                    <div className="p-4 px-6 hover:bg-zinc-100 border-t cursor-pointer">
+                    <div onClick={() => setCategory("Serviço Militar")} className="p-4 px-6 hover:bg-zinc-200 border-t cursor-pointer">
                         Serviço Militar
                     </div>
 
-                    <div className="p-4 px-6 hover:bg-zinc-100 border-t cursor-pointer">
+                    <div onClick={() => setCategory("Alistamento Militar")} className="p-4 px-6 hover:bg-zinc-200 border-t cursor-pointer">
                         Alistamento Militar
                     </div>
 
-                    <div className="p-4 px-6 hover:bg-zinc-100 border-t cursor-pointer">
+                    <div onClick={() => setCategory("Dispensa")} className="p-4 px-6 hover:bg-zinc-200 border-t cursor-pointer">
                         Dispensa
                     </div>
 
                 </div>
+
+                <div className="h-[calc(100%-50px)] overflow-auto">
+                    <div className="m-4 mx-6">
+
+                        {
+                            questions.map(function (question, i) {
+
+                                if (question.category == category) {
+                                    return (
+                                        <div onClick={() => setIndex(index == i ? null : i)} className="flex flex-col w-full cursor-pointer text-stone-800 p-4 mb-2 border bg-zinc-100 rounded">
+                                            <div className="flex items-center justify-between">
+                                                {question.question}
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                </svg>
+
+                                            </div>
+
+                                            {index == i ?
+                                                <div className="mt-2 text-sm">{question.answer}</div>
+                                                : ""}
+
+                                        </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                </div>
+
             </div>
         </div>
     )
