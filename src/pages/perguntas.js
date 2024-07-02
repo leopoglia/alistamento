@@ -73,15 +73,15 @@ export default function Perguntas() {
             <p>Perguntas frequentes</p>
             <div className="w-full h-[calc(100vh-200px)] mt-2 border rounded overflow-hidden">
                 <div className="w-full h-14 flex items-center px-6 border-b">
-                    <div onClick={() => setCategory("Serviço Militar")} className="p-4 px-6 hover:bg-zinc-200 border-t cursor-pointer">
+                    <div onClick={() => setCategory("Serviço Militar")} className="p-4 px-6 border-l border-r hover:bg-zinc-100 hover:border-t cursor-pointer">
                         Serviço Militar
                     </div>
 
-                    <div onClick={() => setCategory("Alistamento Militar")} className="p-4 px-6 hover:bg-zinc-200 border-t cursor-pointer">
+                    <div onClick={() => setCategory("Alistamento Militar")} className="p-4 px-6 border-r hover:bg-zinc-100 border-t cursor-pointer">
                         Alistamento Militar
                     </div>
 
-                    <div onClick={() => setCategory("Dispensa")} className="p-4 px-6 hover:bg-zinc-200 border-t cursor-pointer">
+                    <div onClick={() => setCategory("Dispensa")} className="p-4 px-6 border-r hover:bg-zinc-100 border-t cursor-pointer">
                         Dispensa
                     </div>
 
@@ -93,9 +93,9 @@ export default function Perguntas() {
                         {
                             questions.map(function (question, i) {
 
-                                if (question.category == category) {
+                                if (question.category === category) {
                                     return (
-                                        <div onClick={() => setIndex(index == i ? null : i)} className="flex flex-col w-full cursor-pointer text-stone-800 p-4 mb-2 border bg-zinc-100 rounded">
+                                        <div onClick={() => setIndex(index === i ? null : i)} className="flex flex-col w-full cursor-pointer text-stone-800 p-4 mb-2 border bg-zinc-100 rounded">
                                             <div className="flex items-center justify-between">
                                                 {question.question}
 
@@ -105,7 +105,7 @@ export default function Perguntas() {
 
                                             </div>
 
-                                            {index == i ?
+                                            {index === i ?
                                                 <div className="mt-2 text-sm">{question.answer}</div>
                                                 : ""}
 

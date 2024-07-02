@@ -26,7 +26,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="h-screen md:overflow-hidden">
+      <div className="h-screen">
         <Header />
         <Root />
         <Footer style="black" />

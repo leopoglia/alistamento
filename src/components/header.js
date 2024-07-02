@@ -41,7 +41,7 @@ export default function Header() {
                     <p className="text-zinc-300 mr-8 cursor-pointer hover:text-white">Perguntas frequentes</p>
                 </Link>
 
-                {loc == "/" &&
+                {loc === "/" &&
                     <Link to="/servicos">
                         <button className="w-40 h-10 bg-diamount-500 hover:bg-diamount-600 text-white rounded-full">
                             Entrar com gov.br

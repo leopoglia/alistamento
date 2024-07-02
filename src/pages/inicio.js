@@ -18,13 +18,13 @@ export default function Inicio() {
 
         <div className="mt-14">
           <Link to="/servicos">
-            <button className="w-40 h-10 mr-10 text-xs bg-green-800 hover:bg-green-700 text-white rounded-full">
+            <button className="w-40 h-10 mr-10 text-xs bg-lime-700 hover:bg-lime-800 text-white rounded-full">
               Quero me alistar
             </button>
           </Link>
 
           <Link to="/servicos">
-            <button className="w-40 h-10 text-xs bg-green-800 hover:bg-green-700 text-white rounded-full">
+            <button className="w-40 h-10 text-xs bg-lime-700 hover:bg-lime-800 text-white rounded-full">
               Já me alistei
             </button>
           </Link>
