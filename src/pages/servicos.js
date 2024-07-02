@@ -22,7 +22,7 @@ export default function Servicos() {
             link: "/locais"
         },
         {
-            name: "Requer certificado de dispensa",
+            name: "Requerer certificado de dispensa",
             description: "Solicitar um certificado ou verificar a situação do requerimento",
             link: "/dispensa"
         },
