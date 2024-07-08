@@ -61,7 +61,7 @@ export default function Header() {
 
                 {openProfile &&
                     <div className="absolute top-16 right-6 w-40 bg-white rounded-lg shadow-lg p-2">
-                        <Link to="/profile">
+                        <Link to="/perfil">
                             <p className="text-zinc-700 p-2 px-4 hover:bg-zinc-100 rounded text-sm">
                                 Meu perfil
                             </p>

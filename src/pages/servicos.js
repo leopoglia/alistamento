@@ -11,21 +11,21 @@ export default function Servicos() {
             description: "Realize o seu alistamento militar",
             link: "/alistamento"
         },
-        {
-            name: "Acompanhar Alistamento",
-            description: "Verifique a sua situação atual",
-            link: "/acompanhar"
-        },
+        // {
+        //     name: "Acompanhar Alistamento",
+        //     description: "Verifique a sua situação atual",
+        //     link: "/acompanhar"
+        // },
         {
             name: "Locais de atendimento",
             description: "Encontre um local próximo de você",
             link: "/locais"
         },
-        {
-            name: "Requerer certificado de dispensa",
-            description: "Solicitar um certificado ou verificar a situação do requerimento",
-            link: "/dispensa"
-        },
+        // {
+        //     name: "Requerer certificado de dispensa",
+        //     description: "Solicitar um certificado ou verificar a situação do requerimento",
+        //     link: "/dispensa"
+        // },
         {
             name: "Certificados militares",
             description: "CDI /Reservista / 2ª via",

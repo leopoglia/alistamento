@@ -3,26 +3,36 @@ import { useState } from 'react'
 export default function Alistamento() {
 
 
-    const [data, setData] = useState([])
-
-
-    function searchData(){
-
-        setData({
-            date: "1999-01-01",
-            cpf: "062.114.839-39",
-            name: "Roberto da Silva Nobrega",
-            mother: "Maria da Silva Nobrega",
-            city: "SC | Jaraguá do Sul",
-            local: "SC | Jaraguá do Sul"
-        })
-
-
+    const data = {
+        date: "1999-01-01",
+        cpf: "062.114.839-39",
+        name: "Roberto da Silva Nobrega",
+        mother: "Maria da Silva Nobrega",
+        city: "SC | Jaraguá do Sul",
+        local: "SC | Jaraguá do Sul"
     }
-
 
     return (
         <div className="relative w-full flex flex-col p-8 px-14">
+
+
+            <div className='mb-20 flex items-center'>
+                <div className='w-20 min-w-20 h-20 bg-lime-700 text-white rounded-full text-xs flex items-center justify-center'>
+                    Alistamento
+                </div>
+                <div className='w-1/4 h-1 bg-lime-700'></div>
+                <div className='w-20 min-w-20 h-20 bg-zinc-300 rounded-full text-xs flex items-center justify-center text-center'>
+                    Pagamento taxa
+                </div>
+                <div className='w-1/4 h-1 bg-zinc-300'></div>
+                <div className='w-20 min-w-20 h-20 bg-zinc-300 rounded-full text-xs flex items-center justify-center text-center'>
+                    Jurar bandeira
+                </div>
+                <div className='w-1/4 h-1 bg-zinc-300'></div>
+                <div className='w-20 min-w-20 h-20 bg-zinc-300 rounded-full text-xs flex items-center justify-center text-center'>
+                    Dispensado
+                </div>
+            </div>
 
             <div className="w-full flex justify-between">
                 <p>
@@ -30,9 +40,7 @@ export default function Alistamento() {
                 </p>
 
                 <div className="flex">
-                    <button onClick={() => searchData()} className="w-40 h-10 mr-4 bg-zinc-500 hover:bg-zinc-800 text-white rounded-full">
-                        Buscar dados
-                    </button>
+
 
                     <button className="w-40 h-10 bg-diamount-500 hover:bg-diamount-600 text-white rounded-full">
                         Enviar
@@ -41,7 +49,7 @@ export default function Alistamento() {
             </div>
 
 
-            <form>
+            <form className='mb-10'>
 
 
                 <div className="mt-3">
